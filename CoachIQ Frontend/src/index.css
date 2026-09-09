@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Visible keyboard focus everywhere, instead of relying on default outlines */
+:focus-visible {
+  outline: 2px solid #ff4f2e;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
